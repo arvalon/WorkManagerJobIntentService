@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
 	private static final int TIMEOUT = 3;
 
+	static final String DATA_EXTRA = "extra_data";
+	static final String DATA = "Hello World!";
+
 	/** Попробовать что-инбудь кроме findviewbyid */
 	ActivityMainBinding binding;
 
@@ -53,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
 		Log.d(TAG,"startJobIntentService");
 
 		Intent intent = new Intent(this, MyJobIntentService.class);
+
+		intent.putExtra(DATA_EXTRA, DATA);
 
 		MyJobIntentService.enqueueWork(this, intent);
 	}
