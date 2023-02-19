@@ -1,5 +1,7 @@
 package ru.arvalon.schedulers;
 
+import static android.app.PendingIntent.FLAG_IMMUTABLE;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
@@ -12,10 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import ru.arvalon.schedulers.databinding.ActivityMainBinding;
 
-/**
- * Изучение Workmanager'а и JobIntentService
- * @author Vaganov
- */
+/** Увлекательное исследование Workmanager'а и JobIntentService */
 public class MainActivity extends AppCompatActivity {
 
 	static final String TAG = "work.log";
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 	static final String DATA_EXTRA = "extra_data";
 	static final String DATA = "Hello World!";
 
-	/** Попробовать что-инбудь кроме findviewbyid */
+	/** Попробовать что-нибудь кроме findviewbyid */
 	ActivityMainBinding binding;
 
 	@Override
